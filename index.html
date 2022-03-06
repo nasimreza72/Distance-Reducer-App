@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waypoints in Directions</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar">
+        <div>
+            <select id="transit-mode">
+              <option value="DRIVING" >Driving</option>
+              <option value="WALKING" selected>Walking</option>
+              <option value="BICYCLING">Cycling</option>
+              <option value="TRANSIT">Transit</option>
+            </select>
+
+            <p>Mode of Travel</p>
+            
+          <input
+            id="start"
+            type="text"
+            placeholder="starting destination..."
+          />
+
+          <div id="waypoints">
+            <input
+              type="text"
+              value=""
+              placeholder="next destination..."
+            />
+          </div>
+          <div id="dButton"></div>
+          <button id="addInput" value="good">+ add destination</button>
+
+          <input
+            id="end"
+            type="text"
+            placeholder="end destination..."
+          />
+
+          <br />
+
+          <button id="submit">SUBMIT</button>
+        </div>
+        <div id="directions-panel"></div>
+      </div>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIo2VwqE2BYnrvSjtIsRhHa7lNTwBWx3I&callback=initMap&v=weekly"
+      async
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
