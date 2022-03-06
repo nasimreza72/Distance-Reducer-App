@@ -99,5 +99,5 @@ console.log(typeof tMode);
         summaryPanel.innerHTML += route.legs[i].distance.text + "<br><br>";
       }
     })
-    .catch((e) => window.alert("Not a valid addressee"));
+    .catch((e) => window.alert("please choose a travel mode!!"));
 }
