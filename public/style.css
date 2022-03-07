@@ -72,6 +72,7 @@ button{
 #submit{
   padding: 10px 45px;
   margin-bottom: 2.5vh;
+  margin-right: 23.2rem;
 }
 
 
@@ -123,6 +124,18 @@ letter-spacing: -1.5px;
   font-size: large;
 }
 
+.hButton{
+  position: absolute;
+  z-index: 1;
+  padding: 5px 25px;
+  right: 35%;
+  top: 1%;
+  display: none;
+  font-size: 3.5rem;
+  border-radius: 5px;
+
+}
+
 b{
   color: #068a0c;
 }
@@ -162,7 +175,7 @@ b{
     font-size: 2.5rem;
   }
 
-  #submit{
+  #submit, #showMap{
     padding: 20px 75px;
     margin-bottom: 2.5vh;
   }

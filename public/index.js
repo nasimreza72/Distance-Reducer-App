@@ -12,6 +12,19 @@ function initMap() {
   });
 }
 
+const shButton = document.querySelector(".hButton")
+const showMap = document.getElementById("showMap");
+
+showMap.addEventListener("click", (e) => {
+  document.getElementById("sidebar").style.display="none"
+  shButton.style.display = "block"
+})
+
+shButton.addEventListener("click", (e) => {
+  document.getElementById("sidebar").style.display="block"
+  shButton.style.display = "none"
+})
+
 
 const checkboxArray = document.getElementById("waypoints");
 const inputMaker = document.getElementById("addInput");
