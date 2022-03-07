@@ -12,6 +12,9 @@ function initMap() {
   });
 }
 
+let tMode = "DRIVING";
+
+
 const shButton = document.querySelector(".hButton")
 const showMap = document.getElementById("showMap");
 
@@ -53,10 +56,9 @@ const transitMode = document.getElementById("transit-mode")
 
 
 transitMode.addEventListener("click", (e) => {
-  tMode = (e.target.value);
+tMode = (e.target.value);
 })
 
-let tMode = "DRIVING";
 
    
 
