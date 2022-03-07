@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: monospace;
   color: rgb(68, 68, 68);
+  scroll-behavior: smooth;
 }
 
 #container {
@@ -71,6 +72,7 @@ button{
 
 #submit{
   padding: 10px 45px;
+  margin-bottom: 2.5vh;
 }
 
 
@@ -83,6 +85,10 @@ button:hover{
 p{
   font-size: x-large;
   font-weight: bolder;
+  letter-spacing: -.5px;
+  word-spacing:-5px;
+  position: relative;
+  top: 5px;
 }
 
 
@@ -104,19 +110,37 @@ p{
   position: relative;
 }
 
-#transit-mode{
-  float: right;
-  padding: 7px 25px;
-  margin-right: 50px;
-  border-radius: 5px;
+#dReducer{
+letter-spacing: -1.5px;
 }
 
-@media(max-width: 1068px) {
+#transit-mode{
+  padding: 7px 25px;
+  margin-right: 5px;
+  border-radius: 5px;
+  position: absolute;
+  right: 24px;
+  top: 70px;
+  font-size: large;
+}
+
+b{
+  color: #068a0c;
+}
+
+@media(max-width: 768px) {
   #sidebar{
     width: 100%;
   }
 
   input{
-    width: 92.5%;
+    width: 96.5%;
   }
+
+  #transit-mode{
+    margin-right: 1px;
   }
+
+  }
+  
+  

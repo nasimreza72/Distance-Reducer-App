@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Waypoints in Directions</title>
+    <title>Distance Reducer Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
@@ -10,7 +10,13 @@
     <div id="container">
       <div id="map"></div>
       <div id="sidebar">
+
+        <h1 id="dReducer" >Distance Reducer Map</h1>
+
         <div>
+
+          <p>Mode of Travel</p>
+
             <select id="transit-mode">
               <option value="DRIVING" selected >Driving</option>
               <option value="WALKING" >Walking</option>
@@ -18,7 +24,6 @@
               <option value="TRANSIT">Transit</option>
             </select>
 
-            <p>Mode of Travel</p>
             
           <input
             id="start"
@@ -34,7 +39,7 @@
             />
           </div>
           <div id="dButton"></div>
-          <button id="addInput" value="good">+ add destination</button>
+          <button id="addInput" value="good"> <b>+</b> add destination</button>
 
           <input
             id="end"
@@ -51,10 +56,10 @@
     </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="./index.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIo2VwqE2BYnrvSjtIsRhHa7lNTwBWx3I&callback=initMap&v=weekly"
       async
     ></script>
-    <script src="./index.js"></script>
   </body>
 </html>
