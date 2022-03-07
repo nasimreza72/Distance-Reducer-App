@@ -55,7 +55,7 @@ inputMaker.addEventListener("click", ()=> {
 const transitMode = document.getElementById("transit-mode")
 
 
-transitMode.addEventListener("click", (e) => {
+transitMode.addEventListener("change", (e) => {
 tMode = (e.target.value);
 })
 
