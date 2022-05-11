@@ -97,22 +97,38 @@ console.log(typeof tMode);
       const route = response.routes[0];
       const summaryPanel = document.getElementById("directions-panel");
 
+      let totalDistance = 0;
+      let totalTravelTime = 0;
+
       summaryPanel.innerHTML = "";
 
       // For each route, display summary information.
       for (let i = 0; i < route.legs.length; i++) {
+
         const routeSegment = i + 1;
+        totalDistance += route.legs[i].distance.value,
+        totalTravelTime += route.legs[i].duration.value
 
         summaryPanel.innerHTML +=
           "<b>Route details: " + routeSegment + "</b><br>";
-
-        console.log(route.legs);
-
         summaryPanel.innerHTML += route.legs[i].start_address + " to ";
         summaryPanel.innerHTML += route.legs[i].end_address + "<br>";
         summaryPanel.innerHTML += route.legs[i].duration.text + " & ";
         summaryPanel.innerHTML += route.legs[i].distance.text + "<br><br>";
+      
+        console.log("Route legs",route.legs);
+
       }
+
+
+
+      document.getElementById("total-travel-time").innerHTML = "<b> Total Duration: </b>" + Math.floor((totalTravelTime/60)/60) + " hours"
+     
+      document.getElementById("total-distance").innerHTML = "<b> Total Distance: </b>" + Math.floor(totalDistance/1000) + " km"
+
+   
+
+
     })
     .catch((e) => window.alert("please choose a travel mode!!"));
 }

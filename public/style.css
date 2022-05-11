@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: monospace;
@@ -9,30 +9,30 @@ body {
 }
 
 #container {
+  width: 100vw;
   height: 100%;
-  display: flex;
 }
 
 #sidebar {
   flex-basis: 15rem;
   flex-grow: 1;
-  padding: .5rem 2rem;
+  padding: 2vw;
   width: 40rem;
   max-height: 100vh;
   box-sizing: border-box;
   overflow: auto;
-  position: absolute;
+  position: fixed;
   right: 0;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.95);
   font-weight: bolder;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 0px 0px 0px 5px ;
+  border-radius: 0px 0px 0px 5px;
 }
 
 #map {
-  flex-basis: 0;
-  flex-grow: 4;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -42,162 +42,108 @@ body {
   color: rgb(48, 48, 48);
 }
 
-
-
-
-input{
+input {
+  width: 96%;
   display: block;
-  padding: 10px;
-  width: 34rem;
+  padding: 2%;
   font-size: medium;
   border-radius: 5px;
   border: 1.5px solid gray;
 }
 
-button{
+button {
   padding: 10px;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   font-weight: bolder;
   border: none;
   border-radius: 5px;
-  transition: ease-in-out .35s;
+  transition: ease-in-out 0.35s;
   background-color: rgb(238, 238, 238);
 }
 
-#addInput{
+#addInput {
   padding: 5px;
   margin: 5px 0px;
 }
 
-#submit{
+#submit,
+#showMap {
   padding: 10px 45px;
   margin-bottom: 2.5vh;
-  margin-right: 23rem;
 }
 
-
-button:hover{
+button:hover {
   color: white;
   background-color: black;
 }
 
+#showMap {
+  float: right;
+}
 
-p{
+p {
   font-size: x-large;
   font-weight: bolder;
-  letter-spacing: -.5px;
-  word-spacing:-5px;
+  letter-spacing: -0.5px;
+  word-spacing: -5px;
   position: relative;
   top: 5px;
 }
 
-
-.dButton{
+.dButton {
   width: 15px;
   height: 15px;
   border: 1px solid gray;
   border-radius: 5px;
   position: absolute;
-  right:5px;
+  right: 5px;
   bottom: 12px;
   color: rgb(212, 44, 44);
   padding: 0px 0px 2px 7px;
   font-weight: bold;
 }
 
-
-#dButton{
+#dButton {
   position: relative;
 }
 
-#dReducer{
-letter-spacing: -1.5px;
+#dReducer {
+  letter-spacing: -0.9px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.164),
+    1px 1px 1.5px rgba(0, 0, 0, 0.151);
 }
 
-#transit-mode{
+#transit-mode {
   padding: 7px 25px;
-  margin-right: 5px;
   border-radius: 5px;
-  position: absolute;
-  right: 24px;
+  position: fixed;
+  right: 2vw;
   top: 70px;
   font-size: large;
 }
 
-.hButton{
+.hButton {
   position: absolute;
   z-index: 1;
   padding: 5px 25px;
-  right: 35%;
-  top: 1%;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 0.5%;
   display: none;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   border-radius: 5px;
-
+  background-color: rgb(255, 255, 255);
 }
 
-b{
+b {
   color: #068a0c;
 }
 
 /************ media query ************/
 
-@media only screen and
- (min-width:350px) {
-  #sidebar{
+@media screen and (max-width: 768px) {
+  #sidebar {
     width: 100%;
   }
-
-  input{
-    width: 96.5%;
-    font-size: 4rem;
-  }
-
-  #transit-mode{
-    margin-right: 10px;
-    font-size: 3rem;
-    top: 14.6rem;
-    border-radius: 10px;
-  }
-
-  h1{
-  font-size: 5rem;
-  word-spacing:-1rem;
-  text-align: center;
-  margin-bottom: 5rem;
-  }
-
-  p{
-  font-size: 3.5rem;
-  }
-
-  button{
-    font-size: 2.5rem;
-  }
-
-  #submit, #showMap{
-    padding: 20px 75px;
-    margin-bottom: 2.5vh;
-  }
-
- .dButton{
-  width: 30px;
-  height: 30px;
-  border: 1px solid gray;
-  border-radius: 10px;
-  position: absolute;
-  right:15px;
-  bottom: 17px;
-  color: rgb(212, 44, 44);
-  padding-bottom: 18px;
-  font-weight: bold;
-  font-size: 3rem;
 }
-
-#directions-panel{
-  font-size: 1.5rem;
-}
-
-}
-  
-  
