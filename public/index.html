@@ -1,79 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Distance Reducer Map</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  </head>
 
-  <body>
-    <div id="container">
+<head>
+  <title>Distance Reducer Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
 
-      <button class="hButton">HIDE MAP</button>
+<body>
+  <div id="container">
 
-      <div id="map"></div>
-      <div id="sidebar">
+    <button class="hButton">HIDE MAP</button>
 
-        <h1 id="dReducer" >Distance Reducer Map</h1>
+    <div id="map"></div>
+    <div id="sidebar">
 
-        <div>
+      <h1 id="dReducer">Distance Reducer Map</h1>
+
+      <div>
+
+        <div id="modeOfTravel">
 
           <p>Mode of Travel</p>
-
-            <select id="transit-mode">
-              <option value="DRIVING" selected >Driving</option>
-              <option value="WALKING" >Walking</option>
-              <option value="BICYCLING">Cycling</option>
-              <option value="TRANSIT">Transit</option>
-            </select>
-
-            
-          <input
-            id="start"
-            type="text"
-            placeholder="starting destination..."
-          />
-
-          <div id="waypoints">
-            <input
-              type="text"
-              value=""
-              placeholder="next destination..."
-            />
-          </div>
-          <div id="dButton"></div>
-          <button id="addInput" value="good"> <b>+</b> add destination</button>
-
-          <input
-            id="end"
-            type="text"
-            placeholder="end destination..."
-          />
-
-          <br />
-
-          <button id="submit">SUBMIT</button>
-          <button id="showMap">SHOW MAP</button>
+          <select class="transit-mode">
+            <option value="DRIVING" selected>Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Cycling</option>
+            <option value="TRANSIT">Transit</option>
+          </select>
 
         </div>
-        <div id="directions-panel"></div>
 
-        <div id="total-distance"></div>
-        
-        <div id="total-travel-time"></div>
+        <input id="start" type="text" placeholder="starting destination..." />
+
+        <div id="waypoints">
+          <input type="text" value="" placeholder="next destination..." />
+        </div>
+        <div id="dButton"></div>
+        <button id="addInput" value="good"> <b>+</b> add destination</button>
+
+        <input id="end" type="text" placeholder="end destination..." />
+
+        <br />
+
+        <button id="submit">SUBMIT</button>
+        <button id="showMap">SHOW MAP</button>
 
       </div>
+      <div id="directions-panel"></div>
 
+      <div id="total-distance"></div>
 
-      
+      <div id="total-travel-time"></div>
+
     </div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="./index.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIo2VwqE2BYnrvSjtIsRhHa7lNTwBWx3I&callback=initMap&v=weekly"
-      async
-    ></script>
-  </body>
+
+
+  </div>
+
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script src="./index.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIo2VwqE2BYnrvSjtIsRhHa7lNTwBWx3I&callback=initMap&v=weekly"
+    async></script>
+</body>
+
 </html>

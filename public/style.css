@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: monospace;
-  color: rgb(68, 68, 68);
+  color: rgba(65, 65, 65, 0.863);
   scroll-behavior: smooth;
 }
 
@@ -16,18 +16,16 @@ body {
 #sidebar {
   flex-basis: 15rem;
   flex-grow: 1;
-  padding: 2vw;
+  padding: 20px;
   width: 40rem;
-  max-height: 100vh;
   box-sizing: border-box;
-  overflow: auto;
   position: fixed;
   right: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
   font-weight: bolder;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 0px 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 #map {
@@ -110,17 +108,23 @@ p {
 
 #dReducer {
   letter-spacing: -0.9px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.164),
-    1px 1px 1.5px rgba(0, 0, 0, 0.151);
+  text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.164),
+    .5px .5px .5px rgba(0, 0, 0, 0.151);
 }
 
-#transit-mode {
-  padding: 7px 25px;
+#modeOfTravel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transit-mode {
+  width: 120px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
   border-radius: 5px;
-  position: fixed;
-  right: 2vw;
-  top: 70px;
-  font-size: large;
+  position: relative;
+  top: 3px;
 }
 
 .hButton {
@@ -131,7 +135,7 @@ p {
   transform: translateX(50%);
   bottom: 0.5%;
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
