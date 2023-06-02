@@ -58,11 +58,14 @@ button {
   border-radius: 5px;
   transition: ease-in-out 0.35s;
   background-color: rgb(238, 238, 238);
+  color: #4682e2;
+
 }
 
 #addInput {
   padding: 5px;
   margin: 5px 0px;
+  color: #4682e2;
 }
 
 #submit,
@@ -107,18 +110,24 @@ p {
 }
 
 #dReducer {
-  letter-spacing: -0.9px;
-  text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.164),
-    .5px .5px .5px rgba(0, 0, 0, 0.151);
+  color: #4682e2;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-shadow: .2px .2px .2px rgba(0, 0, 0, 0.164),
+    .2px .2px .2px rgba(0, 0, 0, 0.151);
 }
 
 #modeOfTravel{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #4682e2;
+  letter-spacing: 1px;
+  text-shadow: .2px .2px .2px rgba(0, 0, 0, 0.164),
+    .2px .2px .2px rgba(0, 0, 0, 0.151);
 }
 
-.transit-mode {
+#transit-mode {
   width: 120px;
   padding: 5px 10px;
   font-size: 1.2rem;

@@ -53,14 +53,14 @@ inputMaker.addEventListener("click", ()=> {
   
 })
 
-const transitMode = document.getElementById("transit-mode")
+let transitMode = document.getElementById("transit-mode")
 
-
-transitMode.addEventListener("change", (e) => {
-tMode = (e.target.value);
+transitMode.addEventListener( "change" , (e) => {
+  console.log(e.target.value);
+ return tMode = e.target.value;
 })
 
-
+console.log(tMode);
    
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
